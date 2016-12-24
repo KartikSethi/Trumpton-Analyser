@@ -1,4 +1,3 @@
-
 Trumpton Analyser is a facial recognition Web Application that analyses the given image and predict whether the image contains Hillary Clinton or Donald Trump or both or none of them.
 
 ### Link to the application: [Trumpton Analyser](http://kartik1295.pythonanywhere.com/)
