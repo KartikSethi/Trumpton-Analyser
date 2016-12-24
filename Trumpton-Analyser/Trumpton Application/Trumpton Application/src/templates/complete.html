@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TrumpTon Analyser</title>
+</head>
+<body>
+<h3><u>Uploaded Image</u></h3>
+<br>
+<img src ="{{ url_for('send_image', filename=image_name) }}">
+<br>
+<h3><u>Image with facial detection</u></h3>
+<br>
+<img src="{{ url_for('send_image', filename=detected) }}">
+<br>
+<h3><u>Output:</u></h3>
+{%  if trump and hillary %}
+<p>{
+"Donald Trump": "Yes",
+"Hillary Clinton": "Yes"
+}</p>
+{%  elif (not trump) and hillary %}
+<p>{
+"Donald Trump": "No",
+"Hillary Clinton": "Yes"
+}</p>
+{% elif trump and (not hillary) %}
+<p>{
+"Donald Trump": "Yes",
+"Hillary Clinton": "No"
+}</p>
+{%  else %}
+<p>{
+"Donald Trump": "No",
+"Hillary Clinton": "No"
+}</p>
+{% endif %}
+</body>
+</html>
