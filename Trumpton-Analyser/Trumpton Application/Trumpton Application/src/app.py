@@ -18,8 +18,10 @@ from PIL import Image as PImage
 from keras.preprocessing.image import ImageDataGenerator
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
-model = load_model('model_without_cross_validation.h5')
-model.load_weights('weights_without_cross_validation.h5')
+model = load_model('model_with_more_pictures.h5')
+model.load_weights('more_pictures.h5')
+# model = load_model('model_without_cross_validation.h5')
+# model.load_weights('weights_without_cross_validation.h5')
 # model = load_model(model_cross_validation.h5')
 # model.load_weights('weights_cross_validation.h5')
 # model = load_model('gen_model.h5')
