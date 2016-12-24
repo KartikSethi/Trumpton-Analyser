@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TrumpTon Analyser</title>
+    <title>Trumpton Analyser</title>
 </head>
 <body>
 <h3><u>Uploaded Image</u></h3>
 <br>
 <img src ="{{ url_for('send_image', filename=image_name) }}">
 <br>
-<h3><u>Image with facial detection</u></h3>
+<h3>Image with facial detection</h3>
 <br>
 <img src="{{ url_for('send_image', filename=detected) }}">
 <br>
-<h3><u>Output:</u></h3>
+<h3>Output:</h3>
 {%  if trump and hillary %}
 <p>{
 "Donald Trump": "Yes",
